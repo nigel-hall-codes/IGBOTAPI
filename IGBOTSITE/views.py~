@@ -1,0 +1,44 @@
+from django.shortcuts import render
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+
+# Create your views here.
+
+def home(request):
+    return render(request, 'home.html')
+
+class testAPI(APIView):
+    def get(self, request):
+        data = {"message": "Hello Carlos"}
+        return Response(data)
+
+    def post(self, request):
+        num = int(request.data['num'])
+        response = {'num': num + 1}
+        return Response(response)
+class MemesOn(APIView):
+    
+    def post(self, request):
+        on = request.data["on"]
+        print(type(on))
+        if type(on) == type(1):
+            print("Set option")
+            response = {"message": "Option has been set"}
+
+        else:
+            print("Not a bool")
+            response = {"message": "Not a Bool"}
+
+        return Response(response)
+
+
+class NewDealsOn(APIView):
+    def post(self, request):
+        on = request.data["on"]
+        if type(on) == type(1):
+            response = {"message": "Option has been set"}
+        else:
+            response = {"message":"Not a Bool"}
+        return Response(response)
+    

@@ -1,0 +1,566 @@
+Traceback (most recent call last):
+  File "manage.py", line 8, in <module>
+    from django.core.management import execute_from_command_line
+ImportError: No module named 'django'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "manage.py", line 14, in <module>
+    ) from exc
+ImportError: Couldn't import Django. Are you sure it's installed and available on your PYTHONPATH environment variable? Did you forget to activate a virtual environment?
+[06/Jun/2018 17:07:02] "GET /testAPI/ HTTP/1.1" 200 6734
+[06/Jun/2018 17:07:03] "GET /testAPI/ HTTP/1.1" 200 6734
+[06/Jun/2018 17:07:17] "GET /testAPI/ HTTP/1.1" 200 6734
+[06/Jun/2018 17:07:18] "GET /testAPI/ HTTP/1.1" 200 6734
+[06/Jun/2018 17:07:24] "GET / HTTP/1.1" 200 1080
+[06/Jun/2018 17:07:24] "GET /static/js/home.js HTTP/1.1" 404 1659
+[06/Jun/2018 17:07:24] "GET /static/js/home.js HTTP/1.1" 404 1659
+[06/Jun/2018 17:07:28] "GET /testAPI/ HTTP/1.1" 200 6734
+[06/Jun/2018 17:07:37] "GET /testAPI/ HTTP/1.1" 200 6734
+[06/Jun/2018 17:07:43] "GET /testAPI/ HTTP/1.1" 200 6734
+[06/Jun/2018 17:08:24] "GET /testAPI/ HTTP/1.1" 200 6734
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2018 - 17:06:08
+Django version 2.0.6, using settings 'IGBOTSITE.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2018 - 17:21:17
+Django version 2.0.6, using settings 'IGBOTSITE.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[06/Jun/2018 17:22:39] "GET /MemesOn HTTP/1.1" 301 0
+[06/Jun/2018 17:22:39] "GET /MemesOn/ HTTP/1.1" 405 5481
+[06/Jun/2018 17:22:46] "OPTIONS /MemesOn/ HTTP/1.1" 200 5749
+Internal Server Error: /MemesOn/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 23, in post
+    on = request.data["on"]
+TypeError: 'int' object is not subscriptable
+[06/Jun/2018 17:22:58] "POST /MemesOn/ HTTP/1.1" 500 84544
+Internal Server Error: /testAPI/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 17, in post
+    num = int(request.data['num'])
+KeyError: 'num'
+[06/Jun/2018 17:23:22] "POST /testAPI/ HTTP/1.1" 500 84313
+Not Found: /PostMemes/
+[06/Jun/2018 17:23:48] "GET /PostMemes/ HTTP/1.1" 404 2295
+[06/Jun/2018 17:23:55] "GET /MemesOn/ HTTP/1.1" 405 5481
+[06/Jun/2018 17:24:04] "POST /MemesOn/ HTTP/1.1" 200 5440
+[06/Jun/2018 17:24:24] "POST /MemesOn/ HTTP/1.1" 400 5498
+[06/Jun/2018 17:24:39] "POST /MemesOn/ HTTP/1.1" 400 5498
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2018 - 17:22:30
+Django version 2.0.6, using settings 'IGBOTSITE.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Not a bool
+[06/Jun/2018 17:25:44] "GET /MemesOn/ HTTP/1.1" 405 5481
+[06/Jun/2018 17:25:55] "POST /MemesOn/ HTTP/1.1" 400 5514
+[06/Jun/2018 17:26:19] "GET /testAPI/ HTTP/1.1" 200 6734
+[06/Jun/2018 17:26:32] "POST /testAPI/ HTTP/1.1" 200 6708
+[06/Jun/2018 17:26:41] "GET /MemesOn/ HTTP/1.1" 405 5481
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2018 - 17:25:41
+Django version 2.0.6, using settings 'IGBOTSITE.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[06/Jun/2018 17:27:22] "POST /MemesOn/ HTTP/1.1" 200 5449
+Internal Server Error: /MemesOn/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 23, in post
+    on = request.data["on"]
+KeyError: 'on'
+[06/Jun/2018 17:27:49] "POST /MemesOn/ HTTP/1.1" 500 84348
+[06/Jun/2018 17:28:22] "GET /MemesOn/ HTTP/1.1" 405 5481
+[06/Jun/2018 17:28:33] "POST /MemesOn/ HTTP/1.1" 200 5449
+[06/Jun/2018 17:28:48] "POST /MemesOn/ HTTP/1.1" 200 5449
+[06/Jun/2018 17:28:56] "POST /MemesOn/ HTTP/1.1" 200 5449
+[06/Jun/2018 17:29:13] "POST /MemesOn/ HTTP/1.1" 400 5498
+[06/Jun/2018 17:29:27] "POST /MemesOn/ HTTP/1.1" 200 5449
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2018 - 17:27:14
+Django version 2.0.6, using settings 'IGBOTSITE.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+<class 'int'>
+Set option
+<class 'int'>
+Set option
+<class 'int'>
+Set option
+<class 'int'>
+Set option
+<class 'int'>
+Set option
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2018 - 17:34:29
+Django version 2.0.6, using settings 'IGBOTSITE.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[06/Jun/2018 17:39:14] "GET /testAPI/ HTTP/1.1" 200 26
+[06/Jun/2018 18:11:06] "GET /MemesOn/ HTTP/1.1" 405 5481
+[06/Jun/2018 18:21:26] "GET /MemesOn/ HTTP/1.1" 405 5481
+[06/Jun/2018 18:21:33] "GET /MemesOn/ HTTP/1.1" 405 5481
+[06/Jun/2018 18:21:35] "GET /MemesOn/ HTTP/1.1" 405 5481
+[06/Jun/2018 18:27:51] "GET / HTTP/1.1" 200 1080
+[06/Jun/2018 20:59:11] "GET /MemesOn/ HTTP/1.1" 405 5481
+[06/Jun/2018 20:59:42] "POST /MemesOn/ HTTP/1.1" 200 5449
+[06/Jun/2018 21:00:13] "POST /MemesOn/ HTTP/1.1" 400 5498
+[06/Jun/2018 21:00:43] "GET /testAPI/ HTTP/1.1" 200 6734
+[07/Jun/2018 01:50:53] "GET /testAPI/ HTTP/1.1" 200 6734
+[07/Jun/2018 01:50:53] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[07/Jun/2018 01:50:53] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+[07/Jun/2018 01:50:53] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+[07/Jun/2018 01:50:53] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+[07/Jun/2018 01:50:53] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+[07/Jun/2018 01:50:53] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+[07/Jun/2018 01:50:53] "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+[07/Jun/2018 01:50:53] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[07/Jun/2018 01:50:53] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+[07/Jun/2018 01:50:53] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+[07/Jun/2018 01:50:53] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+Not Found: /favicon.ico
+[07/Jun/2018 01:50:54] "GET /favicon.ico HTTP/1.1" 404 2409
+[07/Jun/2018 04:58:25] "GET / HTTP/1.1" 200 1080
+Not Found: /favicon.ico
+[07/Jun/2018 04:58:25] "GET /favicon.ico HTTP/1.1" 404 2409
+[07/Jun/2018 04:58:26] "GET / HTTP/1.1" 200 1080
+[07/Jun/2018 04:58:26] "GET /static/js/home.js HTTP/1.1" 404 1659
+Invalid HTTP_HOST header: 'almosttrained-2gb-sfo1-01-1502943711215-2gb-sfo1-01:8000'. You may need to add 'almosttrained-2gb-sfo1-01-1502943711215-2gb-sfo1-01' to ALLOWED_HOSTS.
+[07/Jun/2018 09:36:59] "GET / HTTP/1.0" 400 59669
+[07/Jun/2018 17:56:10] "GET / HTTP/1.1" 200 1080
+[07/Jun/2018 17:56:10] "GET /static/js/home.js HTTP/1.1" 404 1659
+[07/Jun/2018 17:56:11] "GET /static/js/home.js HTTP/1.1" 404 1659
+Not Found: /favicon.ico
+[07/Jun/2018 17:56:11] "GET /favicon.ico HTTP/1.1" 404 2409
+[07/Jun/2018 17:56:14] "GET /testAPI/ HTTP/1.1" 200 6734
+[07/Jun/2018 17:56:15] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+[07/Jun/2018 17:56:15] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+[07/Jun/2018 17:56:15] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[07/Jun/2018 17:56:15] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[07/Jun/2018 17:56:15] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[07/Jun/2018 17:56:15] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[07/Jun/2018 17:56:15] "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+[07/Jun/2018 17:56:15] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+[07/Jun/2018 17:56:15] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[07/Jun/2018 17:56:15] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+[07/Jun/2018 17:56:15] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+Not Found: /root
+[07/Jun/2018 17:56:38] "GET /root HTTP/1.1" 404 2388
+[07/Jun/2018 17:56:43] "GET /testAPI/ HTTP/1.1" 200 6734
+[07/Jun/2018 17:57:01] "GET /NewDealsOn/ HTTP/1.1" 405 5513
+[07/Jun/2018 18:02:05] "GET / HTTP/1.1" 200 1080
+Not Found: /favicon.ico
+[07/Jun/2018 18:02:06] "GET /favicon.ico HTTP/1.1" 404 2409
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 06, 2018 - 18:21:23
+Django version 2.0.6, using settings 'IGBOTSITE.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+<class 'int'>
+Set option
+[08/Jun/2018 02:11:09] "GET / HTTP/1.1" 200 1080
+Not Found: /favicon.ico
+[08/Jun/2018 02:11:10] "GET /favicon.ico HTTP/1.1" 404 2409
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 08, 2018 - 02:10:26
+Django version 2.0.6, using settings 'IGBOTSITE.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[08/Jun/2018 02:18:26] "GET / HTTP/1.1" 200 1080
+[08/Jun/2018 02:18:26] "GET /static/js/home.js HTTP/1.1" 404 1659
+Not Found: /createUser
+[08/Jun/2018 02:18:34] "GET /createUser HTTP/1.1" 404 2406
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 08, 2018 - 02:18:14
+Django version 2.0.6, using settings 'IGBOTSITE.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 08, 2018 - 02:19:32
+Django version 2.0.6, using settings 'IGBOTSITE.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Not Found: /createUser
+[08/Jun/2018 02:20:05] "GET /createUser HTTP/1.1" 404 2623
+[08/Jun/2018 02:20:13] "GET /createuser HTTP/1.1" 301 0
+[08/Jun/2018 02:20:13] "GET /createuser/ HTTP/1.1" 405 5508
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 08, 2018 - 02:19:58
+Django version 2.0.6, using settings 'IGBOTSITE.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[08/Jun/2018 02:21:54] "GET /createuser/ HTTP/1.1" 405 5508
+[08/Jun/2018 02:21:55] "GET /createuser/ HTTP/1.1" 405 5508
+Internal Server Error: /createuser/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 26, in post
+    username = data['username']
+NameError: name 'data' is not defined
+[08/Jun/2018 02:22:37] "POST /createuser/ HTTP/1.1" 500 85057
+[08/Jun/2018 02:22:58] "GET /createuser/ HTTP/1.1" 405 5508
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 08, 2018 - 02:21:51
+Django version 2.0.6, using settings 'IGBOTSITE.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[08/Jun/2018 02:24:08] "GET /createuser/ HTTP/1.1" 405 5508
+[08/Jun/2018 02:24:10] "GET /createuser/ HTTP/1.1" 405 5508
+[08/Jun/2018 02:24:14] "POST /createuser/ HTTP/1.1" 200 5469
+[08/Jun/2018 02:24:20] "GET /login HTTP/1.1" 301 0
+[08/Jun/2018 02:24:21] "GET /login/ HTTP/1.1" 405 5458
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 14, in post
+    username = request.data['user']
+KeyError: 'user'
+[08/Jun/2018 02:25:00] "POST /login/ HTTP/1.1" 500 84744
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 08, 2018 - 02:24:07
+Django version 2.0.6, using settings 'IGBOTSITE.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[08/Jun/2018 02:26:04] "GET /login/ HTTP/1.1" 405 5458
+[08/Jun/2018 02:26:06] "GET /login/ HTTP/1.1" 405 5458
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 16, in post
+    user = authenticate(username, password)
+TypeError: authenticate() takes from 0 to 1 positional arguments but 2 were given
+[08/Jun/2018 02:26:29] "POST /login/ HTTP/1.1" 500 85451
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 08, 2018 - 02:26:00
+Django version 2.0.6, using settings 'IGBOTSITE.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[08/Jun/2018 02:28:05] "GET /login/ HTTP/1.1" 405 5458
+[08/Jun/2018 02:28:08] "GET /login/ HTTP/1.1" 405 5458
+[08/Jun/2018 02:28:39] "POST /login/ HTTP/1.1" 200 5459
+[08/Jun/2018 02:29:19] "GET /createuser/ HTTP/1.1" 405 5542
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /testAPI/ HTTP/1.1" 200 6734
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[08/Jun/2018 06:05:22] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+[08/Jun/2018 06:05:36] "OPTIONS /testAPI/ HTTP/1.1" 200 7042
+[08/Jun/2018 06:05:42] "OPTIONS /testAPI/ HTTP/1.1" 200 7042
+[08/Jun/2018 06:05:43] "OPTIONS /testAPI/ HTTP/1.1" 200 7042
+[08/Jun/2018 06:05:44] "GET /testAPI/ HTTP/1.1" 200 6734
+[08/Jun/2018 06:05:46] "GET /testAPI/?format=json HTTP/1.1" 200 26
+[08/Jun/2018 06:05:50] "GET /testAPI/?format=api HTTP/1.1" 200 6789
+[08/Jun/2018 06:05:52] "GET /testAPI/?format=api HTTP/1.1" 200 6789
+[08/Jun/2018 06:05:53] "GET /testAPI/?format=api HTTP/1.1" 200 6789
+[08/Jun/2018 06:09:21] "GET /testAPI/ HTTP/1.1" 200 6734
+[08/Jun/2018 06:09:30] "POST /testAPI/ HTTP/1.1" 400 6791
+Internal Server Error: /testAPI/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 41, in post
+    num = int(request.data['num'])
+TypeError: 'int' object is not subscriptable
+[08/Jun/2018 06:09:39] "POST /testAPI/ HTTP/1.1" 500 84108
+[08/Jun/2018 06:09:47] "GET /testAPI/ HTTP/1.1" 200 6734
+[08/Jun/2018 06:49:00] "GET /testAPI/ HTTP/1.1" 200 6734
+Not Found: /testAPI/login/
+[08/Jun/2018 06:53:12] "GET /testAPI/login/ HTTP/1.1" 404 2635
+Not Found: /testAPI/login
+[08/Jun/2018 06:53:17] "GET /testAPI/login HTTP/1.1" 404 2632
+Not Found: /testAPI/login
+[08/Jun/2018 06:56:03] "GET /testAPI/login HTTP/1.1" 404 2632
+[08/Jun/2018 06:56:04] "GET /testAPI/ HTTP/1.1" 200 6734
+Not Found: /testAPI/createuser/
+[08/Jun/2018 06:56:06] "GET /testAPI/createuser/ HTTP/1.1" 404 2650
+[08/Jun/2018 06:56:46] "GET /createuser/ HTTP/1.1" 405 5508
+[08/Jun/2018 06:57:01] "GET /login/ HTTP/1.1" 405 5458
+[08/Jun/2018 06:57:08] "OPTIONS /login/ HTTP/1.1" 200 5723
+[08/Jun/2018 06:57:12] "OPTIONS /login/ HTTP/1.1" 200 5723
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 14, in post
+    username = request.data['username']
+KeyError: 'username'
+[08/Jun/2018 06:57:17] "POST /login/ HTTP/1.1" 500 83971
+[08/Jun/2018 06:58:21] "GET /createuser/ HTTP/1.1" 405 5508
+[08/Jun/2018 06:58:28] "GET /login/ HTTP/1.1" 405 5458
+[08/Jun/2018 06:58:28] "GET /login/ HTTP/1.1" 405 5458
+[08/Jun/2018 16:00:07] "GET /testAPI/ HTTP/1.1" 200 6734
+[08/Jun/2018 16:00:07] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[08/Jun/2018 16:00:07] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+[08/Jun/2018 16:00:07] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+[08/Jun/2018 16:00:07] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+[08/Jun/2018 16:00:07] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+[08/Jun/2018 16:00:07] "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+[08/Jun/2018 16:00:07] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+[08/Jun/2018 16:00:07] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+[08/Jun/2018 16:00:07] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[08/Jun/2018 16:00:07] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+[08/Jun/2018 16:00:07] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 14, in post
+    username = request.data['username']
+KeyError: 'username'
+[08/Jun/2018 16:02:39] "POST /login/ HTTP/1.1" 500 83971
+[08/Jun/2018 16:57:51] "GET /testAPI/ HTTP/1.1" 200 6734
+[08/Jun/2018 16:57:53] "GET / HTTP/1.1" 200 1080
+[08/Jun/2018 16:57:53] "GET /static/js/home.js HTTP/1.1" 404 1659
+[08/Jun/2018 16:57:54] "GET /createuser/ HTTP/1.1" 405 5508
+[08/Jun/2018 16:57:55] "GET /createuser/ HTTP/1.1" 405 5508
+[08/Jun/2018 16:57:56] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[08/Jun/2018 16:57:56] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[08/Jun/2018 16:57:56] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[08/Jun/2018 16:57:56] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[08/Jun/2018 16:57:56] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[08/Jun/2018 16:57:56] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[08/Jun/2018 16:57:56] "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+[08/Jun/2018 16:57:56] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[08/Jun/2018 16:57:56] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[08/Jun/2018 16:57:56] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[08/Jun/2018 16:57:56] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+Internal Server Error: /createuser/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 28, in post
+    username = data['username']
+KeyError: 'username'
+[08/Jun/2018 17:31:30] "POST /createuser/ HTTP/1.1" 500 14682
+[08/Jun/2018 17:45:06] "GET /login/ HTTP/1.1" 405 5458
+[08/Jun/2018 17:45:07] "GET /login/ HTTP/1.1" 405 5458
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 14, in post
+    username = request.data['username']
+  File "/usr/lib/python3.5/site-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'username'
+[08/Jun/2018 17:45:46] "POST /login/ HTTP/1.1" 500 15119

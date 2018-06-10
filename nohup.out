@@ -965,3 +965,429 @@ Not Found: /favicon.ico
 [10/Jun/2018 04:31:54] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
 [10/Jun/2018 04:31:58] "GET /admin/auth/user/ HTTP/1.1" 200 7536
 [10/Jun/2018 04:31:58] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 05:53:16] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[10/Jun/2018 05:53:16] "GET /admin/ HTTP/1.1" 200 2983
+[10/Jun/2018 05:53:19] "GET /admin/auth/user/ HTTP/1.1" 200 6664
+[10/Jun/2018 05:53:19] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 05:53:45] "GET /createuser/ HTTP/1.1" 405 5541
+[10/Jun/2018 05:55:02] "GET /admin/auth/user/ HTTP/1.1" 200 6664
+[10/Jun/2018 05:55:02] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 05:55:03] "GET /admin/auth/user/ HTTP/1.1" 200 6664
+[10/Jun/2018 05:55:03] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 05:55:14] "GET /admin/auth/user/ HTTP/1.1" 200 6664
+[10/Jun/2018 05:55:14] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 05:55:23] "POST /createuser/ HTTP/1.1" 200 26
+[10/Jun/2018 05:55:31] "GET /admin/auth/user/ HTTP/1.1" 200 7091
+[10/Jun/2018 05:55:31] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 05:55:33] "GET /admin/auth/user/2/change/ HTTP/1.1" 200 13810
+[10/Jun/2018 05:55:33] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 05:55:33] "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+[10/Jun/2018 05:55:33] "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+[10/Jun/2018 05:55:33] "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+[10/Jun/2018 05:55:34] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[10/Jun/2018 05:55:34] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[10/Jun/2018 05:55:49] "GET /admin/auth/user/ HTTP/1.1" 200 7091
+[10/Jun/2018 05:56:48] "GET /admin/auth/user/2/change/ HTTP/1.1" 200 13810
+[10/Jun/2018 05:56:48] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 05:56:57] "GET /admin/auth/user/2/password/ HTTP/1.1" 200 3234
+[10/Jun/2018 05:56:57] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 05:57:03] "GET /admin/auth/user/2/change/ HTTP/1.1" 200 13810
+[10/Jun/2018 05:58:05] "GET /admin/auth/user/ HTTP/1.1" 200 7091
+[10/Jun/2018 05:58:08] "GET /admin/ HTTP/1.1" 200 2983
+[10/Jun/2018 05:58:11] "GET /admin/auth/group/ HTTP/1.1" 200 3583
+[10/Jun/2018 05:58:11] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 05:58:13] "GET /admin/ HTTP/1.1" 200 2983
+[10/Jun/2018 05:58:14] "GET /admin/ HTTP/1.1" 200 2983
+[10/Jun/2018 05:58:15] "GET /admin/ HTTP/1.1" 200 2983
+[10/Jun/2018 05:59:43] "GET /admin/ HTTP/1.1" 200 2983
+[10/Jun/2018 05:59:48] "GET /admin/auth/group/ HTTP/1.1" 200 3583
+[10/Jun/2018 05:59:49] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:06:35] "GET /admin/auth/group/ HTTP/1.1" 200 3583
+[10/Jun/2018 06:06:35] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:06:37] "GET /admin/ HTTP/1.1" 200 2983
+[10/Jun/2018 06:06:38] "GET /admin/auth/group/ HTTP/1.1" 200 3583
+[10/Jun/2018 06:06:39] "GET /admin/auth/group/ HTTP/1.1" 200 3583
+[10/Jun/2018 06:06:39] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:06:41] "GET /admin/auth/group/ HTTP/1.1" 200 3583
+[10/Jun/2018 06:06:41] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:06:43] "GET /admin/ HTTP/1.1" 200 2983
+[10/Jun/2018 06:06:49] "GET /admin/logout/ HTTP/1.1" 200 1215
+[10/Jun/2018 06:06:54] "GET /login/ HTTP/1.1" 405 5458
+[10/Jun/2018 06:07:03] "GET /createuser/ HTTP/1.1" 405 5508
+[10/Jun/2018 06:07:51] "POST /createuser/ HTTP/1.1" 200 5469
+[10/Jun/2018 06:07:58] "GET /admin/ HTTP/1.1" 302 0
+[10/Jun/2018 06:07:58] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1855
+[10/Jun/2018 06:07:58] "GET /admin/ HTTP/1.1" 302 0
+[10/Jun/2018 06:07:58] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1855
+[10/Jun/2018 06:08:07] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[10/Jun/2018 06:08:08] "GET /admin/ HTTP/1.1" 200 2983
+[10/Jun/2018 06:08:11] "GET /admin/auth/group/ HTTP/1.1" 200 3583
+[10/Jun/2018 06:08:11] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:08:13] "GET /admin/ HTTP/1.1" 200 2983
+[10/Jun/2018 06:08:15] "GET /admin/auth/user/ HTTP/1.1" 200 7525
+[10/Jun/2018 06:08:15] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:08:17] "GET /admin/auth/user/3/change/ HTTP/1.1" 200 13819
+[10/Jun/2018 06:08:18] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 10, 2018 - 05:53:11
+Django version 2.0.6, using settings 'IGBOTSITE.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[10/Jun/2018 06:12:11] "GET /admin/ HTTP/1.1" 200 3635
+[10/Jun/2018 06:12:16] "GET /admin/API/usersettings/ HTTP/1.1" 200 4686
+[10/Jun/2018 06:12:16] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:12:20] "GET /admin/API/usersettings/1/change/ HTTP/1.1" 200 7150
+[10/Jun/2018 06:12:20] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:12:29] "GET /admin/API/usersettings/ HTTP/1.1" 200 4686
+[10/Jun/2018 06:12:31] "GET /admin/ HTTP/1.1" 200 3635
+[10/Jun/2018 06:15:38] "GET /admin/ HTTP/1.1" 200 3635
+[10/Jun/2018 06:15:48] "GET /admin/ HTTP/1.1" 302 0
+[10/Jun/2018 06:15:48] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1855
+Not Found: /apple-touch-icon-precomposed.png
+[10/Jun/2018 06:15:48] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2806
+Not Found: /apple-touch-icon.png
+[10/Jun/2018 06:15:48] "GET /apple-touch-icon.png HTTP/1.1" 404 2770
+Not Found: /favicon.ico
+[10/Jun/2018 06:15:49] "GET /favicon.ico HTTP/1.1" 404 2743
+[10/Jun/2018 06:15:54] "GET /admin/ HTTP/1.1" 302 0
+[10/Jun/2018 06:15:54] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1855
+[10/Jun/2018 06:15:54] "GET /static/admin/css/base.css HTTP/1.1" 200 16106
+[10/Jun/2018 06:15:54] "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+[10/Jun/2018 06:15:54] "GET /static/admin/css/responsive.css HTTP/1.1" 200 17894
+[10/Jun/2018 06:15:54] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[10/Jun/2018 06:15:54] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[10/Jun/2018 06:15:54] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[10/Jun/2018 06:16:17] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[10/Jun/2018 06:16:17] "GET /admin/ HTTP/1.1" 200 3637
+[10/Jun/2018 06:16:17] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[10/Jun/2018 06:16:17] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[10/Jun/2018 06:16:17] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[10/Jun/2018 06:16:17] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+[10/Jun/2018 06:16:22] "GET /admin/auth/user/ HTTP/1.1" 200 7962
+[10/Jun/2018 06:16:22] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+[10/Jun/2018 06:16:22] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:16:22] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[10/Jun/2018 06:16:22] "GET /static/admin/js/core.js HTTP/1.1" 200 7134
+[10/Jun/2018 06:16:22] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6897
+[10/Jun/2018 06:16:22] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8729
+[10/Jun/2018 06:16:22] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1538
+[10/Jun/2018 06:16:22] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[10/Jun/2018 06:16:22] "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[10/Jun/2018 06:16:23] "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[10/Jun/2018 06:16:23] "GET /static/admin/js/actions.js HTTP/1.1" 200 6502
+[10/Jun/2018 06:16:23] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[10/Jun/2018 06:16:23] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 258648
+[10/Jun/2018 06:16:23] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[10/Jun/2018 06:16:23] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[10/Jun/2018 06:16:37] "GET /admin/auth/user/ HTTP/1.1" 200 7960
+[10/Jun/2018 06:16:38] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:16:44] "GET /admin/auth/user/4/change/ HTTP/1.1" 200 13868
+[10/Jun/2018 06:16:44] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:16:46] "GET /admin/auth/user/ HTTP/1.1" 200 7960
+[10/Jun/2018 06:16:48] "GET /admin/auth/user/3/change/ HTTP/1.1" 200 13819
+[10/Jun/2018 06:16:48] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:16:52] "GET /admin/auth/user/ HTTP/1.1" 200 7960
+[10/Jun/2018 06:16:53] "GET /admin/ HTTP/1.1" 200 3635
+[10/Jun/2018 06:16:58] "GET /admin/API/usersettings/ HTTP/1.1" 200 4686
+[10/Jun/2018 06:16:59] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:17:01] "GET /admin/API/usersettings/1/change/ HTTP/1.1" 200 7150
+[10/Jun/2018 06:17:01] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:17:04] "GET /admin/API/usersettings/ HTTP/1.1" 200 4686
+[10/Jun/2018 06:17:05] "GET /admin/API/usersettings/2/change/ HTTP/1.1" 200 7150
+[10/Jun/2018 06:17:05] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:17:34] "GET /admin/auth/user/ HTTP/1.1" 200 7962
+[10/Jun/2018 06:17:35] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:18:29] "GET /admin/API/usersettings/ HTTP/1.1" 200 4686
+[10/Jun/2018 06:18:30] "GET /admin/ HTTP/1.1" 200 3635
+[10/Jun/2018 06:18:44] "GET /admin/API/usersettings/ HTTP/1.1" 200 4686
+[10/Jun/2018 06:18:44] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:18:47] "GET /admin/API/usersettings/1/change/ HTTP/1.1" 200 7150
+[10/Jun/2018 06:18:47] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:18:49] "GET /admin/API/usersettings/ HTTP/1.1" 200 4686
+[10/Jun/2018 06:18:50] "GET /admin/ HTTP/1.1" 200 3635
+[10/Jun/2018 06:19:26] "GET /admin/ HTTP/1.1" 200 3637
+[10/Jun/2018 06:19:28] "GET /admin/API/usersettings/ HTTP/1.1" 200 4688
+[10/Jun/2018 06:19:28] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:19:30] "GET /admin/API/usersettings/1/change/ HTTP/1.1" 200 7152
+[10/Jun/2018 06:19:30] "GET /static/admin/css/forms.css HTTP/1.1" 200 8173
+[10/Jun/2018 06:19:30] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[10/Jun/2018 06:19:30] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:19:30] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[10/Jun/2018 06:19:30] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+[10/Jun/2018 06:21:12] "GET /admin/auth/user/ HTTP/1.1" 200 7960
+[10/Jun/2018 06:21:12] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:21:15] "GET /admin/auth/user/ HTTP/1.1" 200 7960
+[10/Jun/2018 06:21:15] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:21:23] "GET /admin/ HTTP/1.1" 200 3635
+[10/Jun/2018 06:21:37] "GET /admin/API/usersettings/ HTTP/1.1" 200 4686
+[10/Jun/2018 06:21:37] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:21:39] "GET /admin/API/usersettings/1/change/ HTTP/1.1" 200 7150
+[10/Jun/2018 06:21:39] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 06:38:56] "GET /admin/ HTTP/1.1" 200 3637
+[10/Jun/2018 06:38:59] "GET /admin/auth/user/ HTTP/1.1" 200 7962
+[10/Jun/2018 06:38:59] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+Internal Server Error: /createuser/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: auth_user.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTAPI/API/views.py", line 39, in post
+    user = User.objects.create_user(username, email, password)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 150, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 144, in _create_user
+    user.save(using=self._db)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/base_user.py", line 73, in save
+    super().save(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/db/models/base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/lib/python3.5/site-packages/django/db/models/base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/lib/python3.5/site-packages/django/db/models/base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/lib/python3.5/site-packages/django/db/models/base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "/usr/lib/python3.5/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/db/models/query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib/python3.5/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/usr/lib/python3.5/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/lib/python3.5/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3.5/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: auth_user.username
+[10/Jun/2018 07:04:27] "POST /createuser/ HTTP/1.1" 500 17641
+[10/Jun/2018 07:05:20] "POST /createuser/ HTTP/1.1" 200 26
+[10/Jun/2018 07:05:30] "GET /admin/ HTTP/1.1" 200 3637
+[10/Jun/2018 07:05:31] "GET /admin/auth/user/ HTTP/1.1" 200 8377
+[10/Jun/2018 07:05:31] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 07:05:42] "POST /admin/auth/user/ HTTP/1.1" 200 3350
+[10/Jun/2018 07:05:42] "GET /static/admin/js/cancel.js HTTP/1.1" 200 204
+[10/Jun/2018 07:05:46] "POST /admin/auth/user/ HTTP/1.1" 302 0
+[10/Jun/2018 07:05:46] "GET /admin/auth/user/ HTTP/1.1" 200 8082
+[10/Jun/2018 07:05:46] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 07:11:25] "POST /login/ HTTP/1.1" 200 44
+[10/Jun/2018 07:11:35] "POST /login/ HTTP/1.1" 200 44
+[10/Jun/2018 07:11:35] "POST /login/ HTTP/1.1" 200 44
+[10/Jun/2018 07:11:35] "POST /login/ HTTP/1.1" 200 44
+[10/Jun/2018 07:11:36] "POST /login/ HTTP/1.1" 200 44
+[10/Jun/2018 07:11:36] "POST /login/ HTTP/1.1" 200 44
+[10/Jun/2018 07:11:36] "POST /login/ HTTP/1.1" 200 44
+[10/Jun/2018 07:11:37] "POST /login/ HTTP/1.1" 200 44
+[10/Jun/2018 07:11:37] "POST /login/ HTTP/1.1" 200 44
+[10/Jun/2018 07:11:38] "POST /login/ HTTP/1.1" 200 44
+[10/Jun/2018 07:11:38] "POST /login/ HTTP/1.1" 200 44
+[10/Jun/2018 07:12:46] "POST /login/ HTTP/1.1" 200 44
+[10/Jun/2018 07:14:09] "POST /createuser/ HTTP/1.1" 200 26
+Internal Server Error: /createuser/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: auth_user.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTAPI/API/views.py", line 39, in post
+    user = User.objects.create_user(username, email, password)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 150, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 144, in _create_user
+    user.save(using=self._db)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/base_user.py", line 73, in save
+    super().save(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/db/models/base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/lib/python3.5/site-packages/django/db/models/base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/lib/python3.5/site-packages/django/db/models/base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/lib/python3.5/site-packages/django/db/models/base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "/usr/lib/python3.5/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/db/models/query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib/python3.5/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/usr/lib/python3.5/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/lib/python3.5/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3.5/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: auth_user.username
+[10/Jun/2018 07:14:30] "POST /createuser/ HTTP/1.1" 500 17641
+Internal Server Error: /createuser/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: auth_user.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTAPI/API/views.py", line 39, in post
+    user = User.objects.create_user(username, email, password)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 150, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 144, in _create_user
+    user.save(using=self._db)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/base_user.py", line 73, in save
+    super().save(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/db/models/base.py", line 729, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/lib/python3.5/site-packages/django/db/models/base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/usr/lib/python3.5/site-packages/django/db/models/base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/usr/lib/python3.5/site-packages/django/db/models/base.py", line 880, in _do_insert
+    using=using, raw=raw)
+  File "/usr/lib/python3.5/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/db/models/query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 1285, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/lib/python3.5/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/usr/lib/python3.5/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/lib/python3.5/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3.5/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/lib/python3.5/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/lib/python3.5/site-packages/django/db/backends/sqlite3/base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: auth_user.username
+[10/Jun/2018 07:14:48] "POST /createuser/ HTTP/1.1" 500 17641
+[10/Jun/2018 07:15:17] "POST /createuser/ HTTP/1.1" 200 26
+[10/Jun/2018 07:15:25] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 07:15:25] "GET /admin/auth/user/ HTTP/1.1" 200 8805
+[10/Jun/2018 07:15:25] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 07:15:31] "POST /admin/auth/user/ HTTP/1.1" 200 3357
+[10/Jun/2018 07:15:33] "POST /admin/auth/user/ HTTP/1.1" 302 0
+[10/Jun/2018 07:15:33] "GET /admin/auth/user/ HTTP/1.1" 200 8502
+[10/Jun/2018 07:18:26] "POST /login/ HTTP/1.1" 200 36
+[10/Jun/2018 07:21:02] "POST /login/ HTTP/1.1" 403 58
+[10/Jun/2018 07:21:03] "POST /login/ HTTP/1.1" 403 58
+[10/Jun/2018 07:21:20] "POST /login/ HTTP/1.1" 403 58
+[10/Jun/2018 07:21:26] "POST /login/ HTTP/1.1" 403 58
+[10/Jun/2018 07:21:28] "POST /login/ HTTP/1.1" 403 58
+[10/Jun/2018 07:21:32] "POST /login/ HTTP/1.1" 403 58
+[10/Jun/2018 07:21:38] "POST /createuser/ HTTP/1.1" 403 58
+[10/Jun/2018 07:28:12] "POST /login/ HTTP/1.1" 200 44
+Invalid HTTP_HOST header: 'almosttrained-2gb-sfo1-01-1502943711215-2gb-sfo1-01:8000'. You may need to add 'almosttrained-2gb-sfo1-01-1502943711215-2gb-sfo1-01' to ALLOWED_HOSTS.
+[10/Jun/2018 16:23:15] "GET / HTTP/1.0" 400 59318
+[10/Jun/2018 18:11:42] "GET /admin/ HTTP/1.1" 200 3635
+[10/Jun/2018 18:11:42] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[10/Jun/2018 18:11:42] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[10/Jun/2018 18:11:43] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[10/Jun/2018 18:11:45] "GET /admin/auth/user/ HTTP/1.1" 200 8380
+[10/Jun/2018 18:11:45] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[10/Jun/2018 18:11:45] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[10/Jun/2018 18:11:45] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 18:11:45] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[10/Jun/2018 18:11:45] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[10/Jun/2018 18:11:45] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[10/Jun/2018 18:11:45] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[10/Jun/2018 18:11:45] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[10/Jun/2018 18:11:45] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[10/Jun/2018 18:11:45] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[10/Jun/2018 18:11:45] "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+[10/Jun/2018 18:11:45] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+[10/Jun/2018 18:11:45] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[10/Jun/2018 18:11:54] "GET /admin/ HTTP/1.1" 200 3635
+[10/Jun/2018 18:11:56] "GET /admin/API/usersettings/ HTTP/1.1" 200 5409
+[10/Jun/2018 18:11:56] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 18:11:58] "GET /admin/API/usersettings/5/change/ HTTP/1.1" 200 7150
+[10/Jun/2018 18:11:58] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 18:12:05] "GET /admin/API/usersettings/ HTTP/1.1" 200 5409
+[10/Jun/2018 18:12:07] "GET /admin/API/usersettings/4/change/ HTTP/1.1" 200 7150
+[10/Jun/2018 18:12:08] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 18:12:13] "GET /admin/API/usersettings/ HTTP/1.1" 200 5409
+[10/Jun/2018 18:12:15] "GET /admin/ HTTP/1.1" 200 3635

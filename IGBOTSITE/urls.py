@@ -25,6 +25,8 @@ urlpatterns = [
     path("newdealson/", views.NewDealsOn.as_view()),
     path("login/", views.Login.as_view()),
     path("createuser/", views.CreateUser.as_view()),
+    path("addigcredentials/", views.AddIGCredentials.as_view()),
+
 ]
 
 

@@ -20,9 +20,9 @@ from API import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^$', views.home),
-    path('testAPI/', views.testAPI.as_view()),
-    path('MemesOn/', views.MemesOn.as_view()),
-    path("NewDealsOn/", views.NewDealsOn.as_view()),
+    path('testapi/', views.testAPI.as_view()),
+    path('memeson/', views.MemesOn.as_view()),
+    path("newdealson/", views.NewDealsOn.as_view()),
     path("login/", views.Login.as_view()),
     path("createuser/", views.CreateUser.as_view()),
 ]

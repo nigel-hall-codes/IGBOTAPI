@@ -1,8 +1,20 @@
-#APIS
+# APIS
 
-#/createuser/
-params:
-username
-password
-email
+## /createuser/  
+### params:  
+username  
+password  
+email  
+  
+
+## /login/  
+### params:  
+username  
+password  
+
+## /memeson/  
+### params:  
+on: Bool  
+
+
 

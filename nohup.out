@@ -564,3 +564,392 @@ Traceback (most recent call last):
     raise MultiValueDictKeyError(key)
 django.utils.datastructures.MultiValueDictKeyError: 'username'
 [08/Jun/2018 17:45:46] "POST /login/ HTTP/1.1" 500 15119
+[08/Jun/2018 17:47:58] "GET / HTTP/1.1" 200 1080
+[08/Jun/2018 17:47:58] "GET /static/js/home.js HTTP/1.1" 404 1659
+[08/Jun/2018 17:47:58] "GET /static/js/home.js HTTP/1.1" 404 1659
+[08/Jun/2018 17:48:04] "GET /testAPI/ HTTP/1.1" 200 6768
+[08/Jun/2018 17:48:04] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[08/Jun/2018 17:48:04] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[08/Jun/2018 17:48:04] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[08/Jun/2018 17:48:04] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[08/Jun/2018 17:48:04] "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+[08/Jun/2018 17:48:04] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[08/Jun/2018 17:48:04] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[08/Jun/2018 17:48:04] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[08/Jun/2018 17:48:04] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[08/Jun/2018 17:48:04] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[08/Jun/2018 17:48:04] "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 14, in post
+    username = request.data['username']
+  File "/usr/lib/python3.5/site-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'username'
+[08/Jun/2018 17:48:46] "POST /login/ HTTP/1.1" 500 15119
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 14, in post
+    username = request.data['username']
+  File "/usr/lib/python3.5/site-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'username'
+[08/Jun/2018 17:53:47] "POST /login/ HTTP/1.1" 500 15119
+[08/Jun/2018 17:59:00] "POST /login/ HTTP/1.1" 200 44
+[08/Jun/2018 18:02:12] "POST /login/ HTTP/1.1" 400 5475
+[08/Jun/2018 18:02:26] "POST /login/ HTTP/1.1" 400 5475
+[08/Jun/2018 18:02:31] "POST /login/ HTTP/1.1" 400 5475
+[08/Jun/2018 18:05:35] "POST /login/ HTTP/1.1" 200 44
+[08/Jun/2018 18:42:46] "POST /login/ HTTP/1.1" 200 44
+[08/Jun/2018 19:22:16] "GET /createuser/ HTTP/1.1" 405 5508
+[08/Jun/2018 19:22:17] "GET /createuser/ HTTP/1.1" 405 5508
+Internal Server Error: /createuser/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 31, in post
+    user = User.objects.create_user(username, email, password)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 150, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 139, in _create_user
+    raise ValueError('The given username must be set')
+ValueError: The given username must be set
+[08/Jun/2018 19:33:37] "POST /createuser/ HTTP/1.1" 500 15090
+Internal Server Error: /createuser/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 31, in post
+    user = User.objects.create_user(username, email, password)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 150, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 139, in _create_user
+    raise ValueError('The given username must be set')
+ValueError: The given username must be set
+[08/Jun/2018 19:33:56] "POST /createuser/ HTTP/1.1" 500 15090
+Internal Server Error: /createuser/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 31, in post
+    user = User.objects.create_user(username, email, password)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 150, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 139, in _create_user
+    raise ValueError('The given username must be set')
+ValueError: The given username must be set
+[08/Jun/2018 19:33:56] "POST /createuser/ HTTP/1.1" 500 15090
+Internal Server Error: /createuser/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 31, in post
+    user = User.objects.create_user(username, email, password)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 150, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 139, in _create_user
+    raise ValueError('The given username must be set')
+ValueError: The given username must be set
+[08/Jun/2018 19:33:56] "POST /createuser/ HTTP/1.1" 500 15090
+Internal Server Error: /createuser/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 31, in post
+    user = User.objects.create_user(username, email, password)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 150, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 139, in _create_user
+    raise ValueError('The given username must be set')
+ValueError: The given username must be set
+[08/Jun/2018 19:33:56] "POST /createuser/ HTTP/1.1" 500 15090
+Internal Server Error: /createuser/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 31, in post
+    user = User.objects.create_user(username, email, password)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 150, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 139, in _create_user
+    raise ValueError('The given username must be set')
+ValueError: The given username must be set
+[08/Jun/2018 19:34:34] "POST /createuser/ HTTP/1.1" 500 15090
+[08/Jun/2018 19:37:58] "POST /login/ HTTP/1.1" 200 44
+Internal Server Error: /createuser/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 31, in post
+    user = User.objects.create_user(username, email, password)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 150, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 139, in _create_user
+    raise ValueError('The given username must be set')
+ValueError: The given username must be set
+[08/Jun/2018 19:38:04] "POST /createuser/ HTTP/1.1" 500 15090
+Internal Server Error: /createuser/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 31, in post
+    user = User.objects.create_user(username, email, password)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 150, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 139, in _create_user
+    raise ValueError('The given username must be set')
+ValueError: The given username must be set
+[08/Jun/2018 19:38:17] "POST /createuser/ HTTP/1.1" 500 15090
+[08/Jun/2018 19:39:33] "POST /login/ HTTP/1.1" 200 44
+Internal Server Error: /createuser/
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/django/views/generic/base.py", line 69, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 483, in dispatch
+    response = self.handle_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 443, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/lib/python3.5/site-packages/rest_framework/views.py", line 480, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/var/www/IGBOTProject2/venv/IGBOTSITE/IGBOTSITE/views.py", line 31, in post
+    user = User.objects.create_user(username, email, password)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 150, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+  File "/usr/lib/python3.5/site-packages/django/contrib/auth/models.py", line 139, in _create_user
+    raise ValueError('The given username must be set')
+ValueError: The given username must be set
+[08/Jun/2018 19:39:46] "POST /createuser/ HTTP/1.1" 500 15090
+[08/Jun/2018 20:33:58] "GET / HTTP/1.1" 200 1080
+Not Found: /favicon.ico
+[08/Jun/2018 20:33:58] "GET /favicon.ico HTTP/1.1" 404 2626
+[08/Jun/2018 22:03:36] code 400, message Bad request syntax ('\x00\x00\x00TZ\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x04\x010I\x00\x00\x00\x00\x80\x0b¨À\x00\x0c)t F\x07\x00tsXrcsXYs9\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00bbXcsXctst\x00\x00\x00\x00\x00\x00')
+[08/Jun/2018 22:03:36] "   TZ          0I    ¨À )t F tsXrcsXYs9                      bbXcsXctst      " 400 -
+Invalid HTTP_HOST header: 'almosttrained-2gb-sfo1-01-1502943711215-2gb-sfo1-01:8000'. You may need to add 'almosttrained-2gb-sfo1-01-1502943711215-2gb-sfo1-01' to ALLOWED_HOSTS.
+[09/Jun/2018 10:20:32] "GET / HTTP/1.0" 400 59668
+[09/Jun/2018 20:35:29] "GET / HTTP/1.1" 200 1080
+[09/Jun/2018 20:35:29] "GET /static/js/home.js HTTP/1.1" 404 1659
+[09/Jun/2018 20:35:30] "GET /static/js/home.js HTTP/1.1" 404 1659
+[09/Jun/2018 20:35:33] "GET /admin HTTP/1.1" 301 0
+[09/Jun/2018 20:35:33] "GET /admin/ HTTP/1.1" 302 0
+[09/Jun/2018 20:35:33] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2007
+[09/Jun/2018 20:35:33] "GET /static/admin/css/base.css HTTP/1.1" 200 16106
+[09/Jun/2018 20:35:33] "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+[09/Jun/2018 20:35:33] "GET /static/admin/css/responsive.css HTTP/1.1" 200 17894
+[09/Jun/2018 20:35:34] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[09/Jun/2018 20:35:34] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[09/Jun/2018 20:35:34] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+[09/Jun/2018 20:35:34] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+Not Found: /admin/l
+[09/Jun/2018 20:37:23] "GET /admin/l HTTP/1.1" 404 4346
+[09/Jun/2018 20:37:25] "GET /admin/ HTTP/1.1" 302 0
+[09/Jun/2018 20:37:25] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2007
+[09/Jun/2018 20:37:32] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[09/Jun/2018 20:37:32] "GET /admin/ HTTP/1.1" 200 2989
+[09/Jun/2018 20:37:32] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[09/Jun/2018 20:37:32] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[09/Jun/2018 20:37:32] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[09/Jun/2018 20:37:34] "GET /admin/auth/user/ HTTP/1.1" 200 7536
+[09/Jun/2018 20:37:34] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+[09/Jun/2018 20:37:34] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[09/Jun/2018 20:37:34] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[09/Jun/2018 20:37:34] "GET /static/admin/js/core.js HTTP/1.1" 200 7134
+[09/Jun/2018 20:37:34] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6897
+[09/Jun/2018 20:37:34] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 258648
+[09/Jun/2018 20:37:34] "GET /static/admin/js/actions.js HTTP/1.1" 200 6502
+[09/Jun/2018 20:37:34] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8729
+[09/Jun/2018 20:37:34] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1538
+[09/Jun/2018 20:37:34] "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[09/Jun/2018 20:37:34] "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[09/Jun/2018 20:37:34] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[09/Jun/2018 20:37:34] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[09/Jun/2018 20:37:34] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[09/Jun/2018 20:37:34] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[09/Jun/2018 20:37:43] "GET /admin/auth/user/2/change/ HTTP/1.1" 200 13621
+[09/Jun/2018 20:37:43] "GET /static/admin/css/forms.css HTTP/1.1" 200 8173
+[09/Jun/2018 20:37:43] "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 5755
+[09/Jun/2018 20:37:43] "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 12680
+[09/Jun/2018 20:37:43] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20283
+[09/Jun/2018 20:37:43] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[09/Jun/2018 20:37:43] "GET /static/admin/js/calendar.js HTTP/1.1" 200 7777
+[09/Jun/2018 20:37:43] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+[09/Jun/2018 20:37:43] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[09/Jun/2018 20:37:43] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[09/Jun/2018 20:37:43] "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+[09/Jun/2018 20:37:43] "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+[09/Jun/2018 20:37:43] "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+[09/Jun/2018 20:37:43] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[09/Jun/2018 20:37:43] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[09/Jun/2018 20:37:45] "GET /admin/auth/user/ HTTP/1.1" 200 7536
+[10/Jun/2018 03:36:53] "GET / HTTP/1.1" 200 1080
+Not Found: /favicon.ico
+[10/Jun/2018 03:36:53] "GET /favicon.ico HTTP/1.1" 404 2626
+[10/Jun/2018 03:47:54] "GET /admin/auth/user/ HTTP/1.1" 200 7536
+[10/Jun/2018 03:47:54] "GET /admin/jsi18n/ HTTP/1.1" 200 3185
+[10/Jun/2018 03:59:44] "GET /admin/auth/user/ HTTP/1.1" 200 7536
+[10/Jun/2018 03:59:44] "GET /admin/jsi18n/ HTTP/1.1" 200 3185

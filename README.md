@@ -16,5 +16,10 @@ password
 ### params:  
 on: Bool  
 
+## /addigcredentials/
+### params:
+username: String
+igusername: String
+igpassword: String
 
 

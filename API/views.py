@@ -10,7 +10,7 @@ from django.contrib.auth import authenticate, login
 from .models import UserSettings
 import json
 from django.core import serializers
-
+from django.views.decorators.csrf import csrf_protect
 
 
 
@@ -34,7 +34,7 @@ class Login(APIView):
         data = {"message": message, "userID": user.id}
         return Response(data)
 
-
+@csrf_protect
 class Create(APIView):
 
     def get(self, request):

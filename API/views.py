@@ -23,6 +23,7 @@ def home(request):
 
 
 class Login(APIView):
+    authentication_classes = [BasicAuthentication]
 
     def get(self, request):
         token = csrf.get_token(request)
@@ -66,6 +67,7 @@ class Create(APIView):
 
 class TestAPI(APIView):
 
+
     def get(self, request):
         data = {"message": "Hello Carlos"}
         return Response(data)
@@ -102,7 +104,7 @@ class NewDealsOn(APIView):
         return Response(response)
 
 class Instagrams(APIView):
-
+    authentication_classes = [BasicAuthentication]
     def post(self, request, id):
         igusername = request.data['igusername']
         igpassword = request.data['igpassword']
@@ -115,12 +117,14 @@ class Instagrams(APIView):
 
 
 class WMs(APIView):
+    authentication_classes = [BasicAuthentication]
     def post(self, request):
         url = request.data['url']
 
         pass
 
 class Settings(APIView):
+    authentication_classes = [BasicAuthentication]
 
     def get(self, request, id):
         user_settings = UserSettings.objects.get(userID=id)

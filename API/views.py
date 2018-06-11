@@ -12,6 +12,7 @@ import json
 from django.core import serializers
 
 
+
 # Create your views here.
 
 def home(request):
@@ -129,6 +130,10 @@ class Settings(APIView):
         resp = {"message": "Settings were updated"}
         return Response(resp)
 
+class BotRun(APIView):
+
+    def post(self, id):
+        pass
 
 
 

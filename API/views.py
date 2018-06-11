@@ -11,6 +11,7 @@ from .models import UserSettings
 import json
 from django.core import serializers
 from django.middleware import csrf
+from rest_framework.authentication import BasicAuthentication
 
 
 
@@ -42,6 +43,7 @@ class Login(APIView):
 
 
 class Create(APIView):
+    authentication_classes = [BasicAuthentication]
 
     def get(self, request):
         resp = {"message": "Need to do POST req"}

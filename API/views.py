@@ -36,7 +36,8 @@ class Login(APIView):
 class Create(APIView):
 
     def get(self, request):
-        pass
+        resp = {"message": "Need to do POST req"}
+        return Response(resp)
 
     def post(self, request):
         data = request.data

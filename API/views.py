@@ -11,7 +11,7 @@ from .models import UserSettings
 import json
 from django.core import serializers
 from django.middleware import csrf
-]
+
 
 
 

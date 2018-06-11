@@ -8,6 +8,8 @@ from rest_framework import status
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from .models import UserSettings
+import json
+from django.core import serializers
 
 
 # Create your views here.
@@ -17,6 +19,7 @@ def home(request):
 
 
 class Login(APIView):
+
     def post(self, request):
         username = request.data['username']
         password = request.data['password']
@@ -26,25 +29,32 @@ class Login(APIView):
             message = "Logged in as {}".format(username)
         else:
             message = "Incorrect username or password"
-        data = {"message": message}
+        data = {"message": message, "userID": user.id}
         return Response(data)
 
 
-class CreateUser(APIView):
+class Create(APIView):
+
+    def get(self, request):
+        pass
+
     def post(self, request):
         data = request.data
         username = data['username']
         email = data['email']
         password = data['password']
-        user = User.objects.create_user(username, email, password)
+        # Check if doesnt exist
 
-        userSettings = UserSettings(userID=user.id)
-        userSettings.save()
+        user = User.objects.create_user(username, email, password)
+        user_settings = UserSettings(userID=user.id)
+        user_settings.save()
+
         resp = {"message": "User created"}
         return Response(resp)
 
 
-class testAPI(APIView):
+class TestAPI(APIView):
+
     def get(self, request):
         data = {"message": "Hello Carlos"}
         return Response(data)
@@ -56,6 +66,7 @@ class testAPI(APIView):
 
 
 class MemesOn(APIView):
+
     def post(self, request):
         on = request.data["on"]
         print(type(on))
@@ -79,13 +90,12 @@ class NewDealsOn(APIView):
             response = {"message": "Not a Bool"}
         return Response(response)
 
-class AddIGCredentials(APIView):
-    def post(self, request):
-        username = request.data['user']
+class Instagrams(APIView):
+
+    def post(self, request, id):
         igusername = request.data['igusername']
         igpassword = request.data['igpassword']
-        user = User.objects.get(username=username)
-        userSettings = UserSettings.objects.get(userID=user.id)
+        userSettings = UserSettings.objects.get(userID=id)
         userSettings.igUsername = igusername
         userSettings.igPassword = igpassword
         userSettings.save()
@@ -93,9 +103,34 @@ class AddIGCredentials(APIView):
         return Response(resp)
 
 
-class AddWeedmapsPage(APIView):
-    def post(self, reques):
+class WMs(APIView):
+    def post(self, request):
+        url = request.data['url']
+
         pass
+
+class Settings(APIView):
+
+    def get(self, request, id):
+        user_settings = UserSettings.objects.get(userID=id)
+        data = serializers.serialize("json", [user_settings])
+        return Response(data)
+
+    def post(self, request, id):
+        memeOn = request.data['memesOn']
+        dailyDealsOn = request.data['dailyDealsOn']
+        newItemsOn = request.data['newItemsOn']
+        user_settings = UserSettings.objects.get(userID=id)
+        user_settings.memeOn = memeOn
+        user_settings.newMenuItemsOn = newItemsOn
+        user_settings.dailyDealsOn = dailyDealsOn
+        user_settings.save()
+        resp = {"message": "Settings were updated"}
+        return Response(resp)
+
+
+
+
 
 
 # scrape dispensaries.  Ask users for url of WM page to match in database. Slug and tipe will be found.

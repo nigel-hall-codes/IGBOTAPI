@@ -20,12 +20,12 @@ from API import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^$', views.home),
-    path('testapi/', views.testAPI.as_view()),
-    path('memeson/', views.MemesOn.as_view()),
-    path("newdealson/", views.NewDealsOn.as_view()),
-    path("login/", views.Login.as_view()),
-    path("createuser/", views.CreateUser.as_view()),
-    path("addigcredentials/", views.AddIGCredentials.as_view()),
+    path('testapi/', views.TestAPI.as_view()),
+    path("account/login/", views.Login.as_view()),
+    path("account/create/", views.Create.as_view()),
+    path("account/<int:id>/settings/", views.Settings.as_view()),
+    path("account/<int:id>/settings/ig", views.Instagrams.as_view()),
+    path("account/<int:id>/settings/wm", views.WMs.as_view()),
 
 ]
 

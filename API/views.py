@@ -10,7 +10,8 @@ from django.contrib.auth import authenticate, login
 from .models import UserSettings
 import json
 from django.core import serializers
-from django.views.decorators.csrf import csrf_exempt
+from django.middleware import csrf
+]
 
 
 
@@ -21,6 +22,11 @@ def home(request):
 
 
 class Login(APIView):
+
+    def get(self, request):
+        token = csrf.get_token(request)
+        resp = {"token": token}
+        return Response(resp)
 
     def post(self, request):
         username = request.data['username']
@@ -34,7 +40,7 @@ class Login(APIView):
         data = {"message": message, "userID": user.id}
         return Response(data)
 
-@csrf_exempt
+
 class Create(APIView):
 
     def get(self, request):

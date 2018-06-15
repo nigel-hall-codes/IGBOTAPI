@@ -1,30 +1,46 @@
 # APIS
 
-## account/login/
+## accounts/login/
 ### type: POST
 ### params:
 #### username: String
 #### password: String
 
-## account/create/
+## accounts/create/
 ### type: POST
 ### params:
 #### username: String
 #### password: String
 #### email: String
 
-## account/<int:id>/settings/
+## accounts/<int:id>/settings/
 ### type: GET
 ### params:
-####None
+#### None
 
-## account/<int:id>/settings/ig
+## accounts/<int:id>/settings/ig
 ### type: POST
 ### params:
 #### igusername: String
 #### igpassword: String
 
-## account/<int:id>/settings/wm
+## accounts/<int:id>/settings/wm
 ### type: POST
 ### params:
 #### url: String
+
+## accounts/<int:userID>/bot/run
+### type: GET
+### params:
+#### None.  This will start the bot
+
+## accounts/<int:userID>/bot/testpost
+### type: GET
+### params:
+#### None.  This will test the bot by posting a meme
+
+## accounts/<int:userID>/bot/stop
+### type: GET
+### params:
+#### None.  THis will destroy the bot
+

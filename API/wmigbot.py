@@ -127,9 +127,10 @@ if __name__ == '__main__':
     if eval(sys.argv[2]):
         bot.post_meme()
 
-    while True:
-        print(bot.settings.botPID)
-        time.sleep(5)
+    else:
+        while True:
+            print(bot.settings.botPID)
+            time.sleep(5)
     # bot.post_meme()
 
 

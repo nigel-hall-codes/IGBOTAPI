@@ -7,6 +7,8 @@ import django
 sys.path.append(os.path.join(sys.path[0], '../../'))
 
 sys.path.append("/Users/Hallshit/Documents/MGIGBOT/venv/IGBOTAPIVENV/IGBOTAPI/")
+sys.path.append("/var/www/IGBOTProject2/venv/IGBOTAPI")
+
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "IGBOTSITE.settings")
 django.setup()
 

@@ -1,24 +1,27 @@
-import peewee
 import sqlite3
 import json
 import urllib.request
-from .models import Dispensary
+import os, sys
+import django
 
+sys.path.append(os.path.join(sys.path[0], '../../'))
 
-conn = sqlite3.connect("/Users/Hallshit/Documents/MGIGBOT/venv/IGBOTAPIVENV/IGBOTAPI/db.sqlite3")
+sys.path.append("/Users/Hallshit/Documents/MGIGBOT/venv/IGBOTAPIVENV/IGBOTAPI/")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "IGBOTSITE.settings")
+django.setup()
 
-c = conn.cursor()
+from API.models import Dispensary
+
+southCity = 'https://api-g.weedmaps.com/wm/v2/listings?filter%5Bplural_types%5D%5B%5D=doctors&filter%5Bplural_types%5D%5B%5D=dispensaries&filter%5Bplural_types%5D%5B%5D=deliveries&filter%5Bregion_slug%5Bdeliveries%5D%5D=south-san-francisco&filter%5Bregion_slug%5Bdispensaries%5D%5D=south-san-francisco&filter%5Bregion_slug%5Bdoctors%5D%5D=san-francisco&page_size=100&size=100'
+sanFran = 'https://api-g.weedmaps.com/wm/v2/listings?filter%5Bplural_types%5D%5B%5D=dispensaries&filter%5Bplural_types%5D%5B%5D=deliveries&filter%5Bregion_slug%5Bdeliveries%5D%5D=san-francisco&filter%5Bregion_slug%5Bdispensaries%5D%5D=san-francisco&page_size=100&size=100'
 
 def downloadDispensaries():
-    deliveryDisURL = 'https://api-g.weedmaps.com/wm/v2/listings?filter%5Bplural_types%5D%5B%5D=dispensaries&filter%5Bplural_types%5D%5B%5D=deliveries&filter%5Bregion_slug%5Bdeliveries%5D%5D=san-francisco&filter%5Bregion_slug%5Bdispensaries%5D%5D=san-francisco&page_size=100&size=100'
+    deliveryDisURL = southCity
     dispensaries = json.loads(urllib.request.urlopen(deliveryDisURL).read().decode('utf-8'))['data']['listings']
-    print(dispensaries)
+    # print(dispensaries)
     for d in dispensaries:
-        dispensary = Dispensary(slug=d['slug'], url=d['web_url'], tipe=d['type'])
+        dispensary, create = Dispensary.objects.get_or_create(slug=d['slug'], url=d['web_url'], tipe=d['type'], wmid=d['wmid'])
         dispensary.save()
-
-
-
 
 
 

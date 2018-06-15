@@ -12,7 +12,11 @@ import json
 from django.core import serializers
 from django.middleware import csrf
 from rest_framework.authentication import BasicAuthentication
+from .wmigbot import WMIGBot
+from .models import Dispensary, UserSettings
 
+import subprocess
+import asyncio
 
 
 
@@ -67,7 +71,6 @@ class Create(APIView):
 
 class TestAPI(APIView):
 
-
     def get(self, request):
         data = {"message": "Hello Carlos"}
         return Response(data)
@@ -118,10 +121,22 @@ class Instagrams(APIView):
 
 class WMs(APIView):
     authentication_classes = [BasicAuthentication]
-    def post(self, request):
-        url = request.data['url']
 
-        pass
+    def get(self, request, id):
+        user_settings = UserSettings.objects.get(userID=id)
+        data = serializers.serialize("json", [user_settings])
+        return Response(data)
+
+
+    def post(self, request, id):
+        url = request.data['url']
+        dispensary = Dispensary.objects.get(url=url)
+        settings = UserSettings.get(userID=id)
+        settings.weedmapsSlug = dispensary.wmid
+        settings.save()
+        resp = {"message": "Assigned Weedmaps Menu"}
+
+
 
 class Settings(APIView):
     authentication_classes = [BasicAuthentication]
@@ -143,10 +158,34 @@ class Settings(APIView):
         resp = {"message": "Settings were updated"}
         return Response(resp)
 
+
 class BotRun(APIView):
 
-    def post(self, id):
-        pass
+    def get(self, request, userID):
+        # If bot already running ignore.  Set status to on in db
+        settings = UserSettings.objects.get(userID=userID)
+        if settings.botStatus == False:
+            bot = WMIGBot(userID)
+            bot.run()
+            resp = {"message", "Bot is now running"}
+        return Response(resp)
+
+class BotStop(APIView):
+
+    def get(self, request, userID):
+        bot = WMIGBot(userID)
+        bot.stop()
+        resp = {"message", "Bot has been stopped"}
+        return Response(resp)
+
+class BotTest(APIView):
+
+    def get(self, request, userID):
+        print(userID)
+        bot = WMIGBot(userID)
+        bot.test()
+        resp = {"message", "It should have posted"}
+        return Response(resp)
 
 
 

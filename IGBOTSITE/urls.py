@@ -26,8 +26,11 @@ urlpatterns = [
     path("accounts/<int:id>/settings/", views.Settings.as_view()),
     path("accounts/<int:id>/settings/ig", views.Instagrams.as_view()),
     path("accounts/<int:id>/settings/wm", views.WMs.as_view()),
-    path("accounts/<int:id>/bot/run", views.BotRun.as_view()),
-    # path("account/<int:id>/bot/testPost", views.BotTest.as_view())
+    path("accounts/<int:userID>/bot/run", views.BotRun.as_view()),
+    path("accounts/<int:userID>/bot/testpost", views.BotTest.as_view()),
+    path("accounts/<int:userID>/bot/stop", views.BotStop.as_view()),
+
+
 
 ]
 

@@ -4,37 +4,60 @@ import time
 import schedule
 from io import open
 from instabot import Bot
-from getMenu import Menu
+
 import urllib.request
 import json
 from PIL import Image
 import datetime
-from .models import Dispensary
-
+import os
+import django
+import subprocess
 sys.path.append(os.path.join(sys.path[0], '../../'))
+
+sys.path.append("/Users/Hallshit/Documents/MGIGBOT/venv/IGBOTAPIVENV/IGBOTAPI/")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "IGBOTSITE.settings")
+django.setup()
+
+from API.models import UserSettings, MenuItem, Dispensary
+from API.getMenu import Menu
 
 
 class WMIGBot:
-    def __init__(self, igusername, igpassword, wmURL):
-        self.igusername = igusername
-        self.igpassword = igpassword
-        self.wmURL = wmURL
+    def __init__(self, userID):
+        self.userID = userID
+        self.settings = UserSettings.objects.get(userID=self.userID)
+        self.igusername = self.settings.igUsername
+        self.igpassword = self.settings.igPassword
+        self.wm_slug = self.settings.weedmapsSlug
+        self.accountDir = "accounts/{}".format(self.igusername)
+        self.initialize_directory()
+        self.dispensary = Dispensary.objects.get(slug=self.wm_slug)
+
+    def initialize_directory(self):
+        if not os.path.exists(self.accountDir):
+            os.makedirs(self.accountDir)
+            f = open("{}/postedMemes.txt".format(self.accountDir), "w+")
+            f.close()
+            os.makedirs("{}/memesToBeUploaded".format(self.accountDir))
+            os.makedirs("{}/menuItemsToBeUploaded".format(self.accountDir))
+            os.makedirs("{}/dailyDealsToBeUploaded".format(self.accountDir))
+
 
     def post_meme(self):
         bot = Bot()
         bot.login(username=self.igusername, password=self.igpassword)
-        memes = bot.get_hashtag_medias("funnyweed")
-        posted_memes = open("postedMemes.txt", "r").read().splitlines()
+        memes = bot.get_hashtag_medias("420")
+        posted_memes = open("{}/postedMemes.txt".format(self.accountDir), "r").read().splitlines()
 
         for m in memes:
             if str(m) not in posted_memes:
                 try:
-                    bot.download_photo(m, filename=m, folder="memesToBeUploaded")
-                    op =  bot.get_media_info(m)[0]['user']['username']
-                    bot.upload_photo('memesToBeUploaded/{}.jpg'.format(m),
-                                      caption="Credits to @{}".format(op))
-                    os.remove('memeToBeUploaded/{}.jpg'.format(m))
-                    f = open('postedMemes.txt', 'a')
+                    bot.download_photo(m, filename=m, folder="{}/memesToBeUploaded".format(self.accountDir))
+                    op = bot.get_media_info(m)[0]['user']['username']
+                    bot.upload_photo('{}/memesToBeUploaded/{}.jpg'.format(self.accountDir, m),
+                                      caption="Credits to {}".format(op))
+                    os.remove('{}/memesToBeUploaded/{}.jpg'.format(self.accountDir, m))
+                    f = open('{}/postedMemes.txt'.format(self.accountDir), 'a')
                     f.write(str(m) + '\n')
                     f.close()
                     break
@@ -42,17 +65,70 @@ class WMIGBot:
                 except Exception as e:
                     bot.logger.warning("Download Failed")
                     print("Download Failed ", e)
-
         bot.logout()
 
+    def run(self):
+        path = os.getcwd()
+        p = subprocess.Popen(["python3", path+"/API/wmigbot.py", str(self.userID), "False"])
+        self.settings.botPID = p.pid
+        self.settings.botStatus = True
+        self.settings.save()
+        print("Bot Started")
+
+    def stop(self):
+        pid = self.settings.botPID
+        subprocess.Popen(["kill", "-9", str(pid)])
+        self.settings.botStatus = False
+        self.settings.save()
+        print("Bot destroyed")
+
     def post_new_menu_items(self):
-        dispensary = Dispensary.objects.get(url=self.wmURL)
-        m = Menu(dispensary.slug, dispensary.tipe)
-        m.downloadNewMenuItemImages()
+
+        m = Menu(self.dispensary.slug, self.dispensary.tipe)
+        base_dir = self.accountDir + "/menuItemsToBeUploaded/"
+        m.downloadNewMenuItemImages(base_dir)
+        bot = Bot()
+        bot.login(username=self.igusername, password=self.igpassword)
+        for image in os.listdir(self.accountDir + '/menuItemsToBeUploaded'):
+            name = "".join(image.split('.')[:-1])
+            bot.upload_photo('{}{}'.format(base_dir, image),
+                             caption="We just added a new item to our menu on Weedmaps! {}".format(name))
+            os.remove('{}{}'.format(base_dir, image))
+        print("new Menu Downloaded")
+        bot.logout()
+
+    def post_daily_deal(self):
+        time = datetime.datetime.now()
+        base_dir = self.accountDir + "/dailyDealsToBeUploaded/"
+        bot = Bot()
+        bot.login(username=self.igusername, password=self.igpassword)
+        m = Menu(self.dispensary.slug, self.dispensary.tipe)
+        todays_deal = m.todays_deal()
+        caption = "Check out today's deal: " + todays_deal['title']
+        imageURL = todays_deal['picture_urls']['medium']
+        m.downloadDailyDealImage(imageURL, time, base_dir)
+        bot.upload_photo("{}{}.jpg".format(base_dir, time), caption=caption)
+        os.remove("{}{}.jpg".format(base_dir, time))
+
+    def test(self):
+        path = os.getcwd()
+        p = subprocess.Popen(["python3", path + "/API/wmigbot.py", str(self.userID), "True"])
+        self.settings.botPID = p.pid
+        self.settings.botStatus = True
+        self.settings.save()
+        print("Bot Started")
 
 
+if __name__ == '__main__':
 
+    bot = WMIGBot(sys.argv[1])
 
+    if eval(sys.argv[2]):
+        bot.post_meme()
 
+    while True:
+        print(bot.settings.botPID)
+        time.sleep(5)
+    # bot.post_meme()
 
 

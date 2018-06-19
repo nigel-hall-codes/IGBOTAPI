@@ -22,6 +22,7 @@ urlpatterns = [
     re_path(r'^$', views.home),
     path('testapi/', views.TestAPI.as_view()),
     path("accounts/login/", views.Login.as_view()),
+    path("accounts/logout/", views.Logout.as_view()),
     path("accounts/create/", views.Create.as_view()),
     path("accounts/<int:id>/settings/", views.Settings.as_view()),
     path("accounts/<int:id>/settings/ig", views.Instagrams.as_view()),

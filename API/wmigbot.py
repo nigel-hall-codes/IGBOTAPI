@@ -70,11 +70,19 @@ class WMIGBot:
 
     def run(self):
         path = os.getcwd()
-        p = subprocess.Popen(["python3", path+"/API/wmigbot.py", str(self.userID), "False"])
+        bash = "nohup python3 {}/API/wmigbot.py {} {} > {}.out& ".format(path,
+                                                                         str(self.userID),
+                                                                         "True",
+                                                                         "alt"
+                                                                        )
+
+
+        # p = subprocess.Popen(["python3", path+"/API/wmigbot.py", str(self.userID), "False"])
+        p = subprocess.Popen(bash.split(" "))
         self.settings.botPID = p.pid
         self.settings.botStatus = True
         self.settings.save()
-        print("Bot Started")
+        print("Bot Started: PID={}".format(p.pid))
 
     def stop(self):
         pid = self.settings.botPID

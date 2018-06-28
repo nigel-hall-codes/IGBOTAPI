@@ -212,7 +212,7 @@ class BotTest(APIView):
     def post(self, request, userID):
         username = request.data['username']
         password = request.data['password']
-        user = authenticate(request, username, password)
+        user = authenticate(request, username=username, password=password)
         bot = WMIGBot(user.id)
         bot.test()
         resp = {"message", "It should have posted"}

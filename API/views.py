@@ -202,12 +202,23 @@ class BotStop(APIView):
 
 class BotTest(APIView):
 
-    def get(self, request, userID):
-        print(userID)
-        bot = WMIGBot(userID)
+    # def get(self, request, userID):
+    #     print(userID)
+    #     bot = WMIGBot(userID)
+    #     bot.test()
+    #     resp = {"message", "It should have posted"}
+    #     return Response(resp)
+
+    def post(self, request, userID):
+        username = request['data']['username']
+        password = request['data']['password']
+        user = authenticate(request, username, password)
+        bot = WMIGBot(user.id)
         bot.test()
         resp = {"message", "It should have posted"}
         return Response(resp)
+
+
 
 
 

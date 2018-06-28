@@ -210,8 +210,8 @@ class BotTest(APIView):
     #     return Response(resp)
 
     def post(self, request, userID):
-        username = request['data']['username']
-        password = request['data']['password']
+        username = request.data['username']
+        password = request.data['password']
         user = authenticate(request, username, password)
         bot = WMIGBot(user.id)
         bot.test()

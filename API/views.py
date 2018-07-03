@@ -161,7 +161,7 @@ class Settings(APIView):
         try:
             user_settings = UserSettings.objects.get(userID=id)
             data = serializers.serialize("json", [user_settings])
-            print(request.user)
+            print(data)
             msg = "Settings Found"
             data['message'] = msg
 

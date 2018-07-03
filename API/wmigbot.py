@@ -137,9 +137,16 @@ if __name__ == '__main__':
         bot.post_meme()
 
     else:
+
+        schedule.every().day.at("16:00").do(bot.post_new_menu_items)
+        schedule.every().day.at("16:00").do(bot.post_daily_deal)
+        schedule.every(6).hours.do(bot.post_meme)
+        schedule.every().day.at("23:17").do(bot.post_meme)
+
         while True:
+            schedule.run_pending()
             print(bot.settings.botPID)
-            time.sleep(5)
+            time.sleep(60)
     # bot.post_meme()
 
 

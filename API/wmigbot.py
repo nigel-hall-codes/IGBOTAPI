@@ -94,32 +94,35 @@ class WMIGBot:
         print("Bot destroyed")
 
     def post_new_menu_items(self):
-
-        m = Menu(self.dispensary.slug, self.dispensary.tipe)
-        base_dir = self.accountDir + "/menuItemsToBeUploaded/"
-        m.downloadNewMenuItemImages(base_dir)
-        bot = Bot()
-        bot.login(username=self.igusername, password=self.igpassword)
-        for image in os.listdir(self.accountDir + '/menuItemsToBeUploaded'):
-            name = "".join(image.split('.')[:-1])
-            bot.upload_photo('{}{}'.format(base_dir, image),
-                             caption="We just added a new item to our menu on Weedmaps! {}".format(name))
-            os.remove('{}{}'.format(base_dir, image))
-        print("new Menu Downloaded")
-        bot.logout()
+        self.settings = UserSettings.objects.get(userID=self.userID)
+        if self.settings.newMenuItemsOn:
+            m = Menu(self.dispensary.slug, self.dispensary.tipe)
+            base_dir = self.accountDir + "/menuItemsToBeUploaded/"
+            m.downloadNewMenuItemImages(base_dir)
+            bot = Bot()
+            bot.login(username=self.igusername, password=self.igpassword)
+            for image in os.listdir(self.accountDir + '/menuItemsToBeUploaded'):
+                name = "".join(image.split('.')[:-1])
+                bot.upload_photo('{}{}'.format(base_dir, image),
+                                 caption="We just added a new item to our menu on Weedmaps! {}".format(name))
+                os.remove('{}{}'.format(base_dir, image))
+            print("new Menu Downloaded")
+            bot.logout()
 
     def post_daily_deal(self):
-        time = datetime.datetime.now()
-        base_dir = self.accountDir + "/dailyDealsToBeUploaded/"
-        bot = Bot()
-        bot.login(username=self.igusername, password=self.igpassword)
-        m = Menu(self.dispensary.slug, self.dispensary.tipe)
-        todays_deal = m.todays_deal()
-        caption = "Check out today's deal: " + todays_deal['title']
-        imageURL = todays_deal['picture_urls']['medium']
-        m.downloadDailyDealImage(imageURL, time, base_dir)
-        bot.upload_photo("{}{}.jpg".format(base_dir, time), caption=caption)
-        os.remove("{}{}.jpg".format(base_dir, time))
+        self.settings = UserSettings.objects.get(userID=self.userID)
+        if self.settings.dailyDealsOn:
+            time = datetime.datetime.now()
+            base_dir = self.accountDir + "/dailyDealsToBeUploaded/"
+            bot = Bot()
+            bot.login(username=self.igusername, password=self.igpassword)
+            m = Menu(self.dispensary.slug, self.dispensary.tipe)
+            todays_deal = m.todays_deal()
+            caption = "Check out today's deal: " + todays_deal['title']
+            imageURL = todays_deal['picture_urls']['medium']
+            m.downloadDailyDealImage(imageURL, time, base_dir)
+            bot.upload_photo("{}{}.jpg".format(base_dir, time), caption=caption)
+            os.remove("{}{}.jpg".format(base_dir, time))
 
     def test(self):
         path = os.getcwd()
@@ -143,7 +146,7 @@ if __name__ == '__main__':
         schedule.every().day.at("16:00").do(bot.post_new_menu_items)
         schedule.every().day.at("16:00").do(bot.post_daily_deal)
         schedule.every(6).hours.do(bot.post_meme)
-        schedule.every().day.at("23:31").do(bot.post_meme)
+        # schedule.every().day.at("23:31").do(bot.post_meme)
 
         while True:
             schedule.run_pending()

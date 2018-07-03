@@ -141,7 +141,7 @@ class WMs(APIView):
         if check_login(request):
             url = request.data['url']
             try:
-                dispensary = Dispensary.objects.(url=url)
+                dispensary = Dispensary.objects.get(url=url)
                 settings = UserSettings.objects.get(userID=id)
                 settings.weedmapsSlug = dispensary.slug
                 settings.save()

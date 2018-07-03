@@ -26,6 +26,7 @@ from API.getMenu import Menu
 class WMIGBot:
     def __init__(self, userID):
         self.userID = userID
+        print(self.userID)
         self.settings = UserSettings.objects.get(userID=self.userID)
         self.igusername = self.settings.igUsername
         self.igpassword = self.settings.igPassword

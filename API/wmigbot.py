@@ -45,28 +45,30 @@ class WMIGBot:
 
 
     def post_meme(self):
-        bot = Bot()
-        bot.login(username=self.igusername, password=self.igpassword)
-        memes = bot.get_hashtag_medias("420")
-        posted_memes = open("{}/postedMemes.txt".format(self.accountDir), "r").read().splitlines()
+        self.settings = UserSettings.objects.get(userID=self.userID)
+        if self.settings.memeOn:
+            bot = Bot()
+            bot.login(username=self.igusername, password=self.igpassword)
+            memes = bot.get_hashtag_medias("420")
+            posted_memes = open("{}/postedMemes.txt".format(self.accountDir), "r").read().splitlines()
 
-        for m in memes:
-            if str(m) not in posted_memes:
-                try:
-                    bot.download_photo(m, filename=m, folder="{}/memesToBeUploaded".format(self.accountDir))
-                    op = bot.get_media_info(m)[0]['user']['username']
-                    bot.upload_photo('{}/memesToBeUploaded/{}.jpg'.format(self.accountDir, m),
-                                      caption="Credits to {}".format(op))
-                    os.remove('{}/memesToBeUploaded/{}.jpg'.format(self.accountDir, m))
-                    f = open('{}/postedMemes.txt'.format(self.accountDir), 'a')
-                    f.write(str(m) + '\n')
-                    f.close()
-                    break
+            for m in memes:
+                if str(m) not in posted_memes:
+                    try:
+                        bot.download_photo(m, filename=m, folder="{}/memesToBeUploaded".format(self.accountDir))
+                        op = bot.get_media_info(m)[0]['user']['username']
+                        bot.upload_photo('{}/memesToBeUploaded/{}.jpg'.format(self.accountDir, m),
+                                          caption="Credits to {}".format(op))
+                        os.remove('{}/memesToBeUploaded/{}.jpg'.format(self.accountDir, m))
+                        f = open('{}/postedMemes.txt'.format(self.accountDir), 'a')
+                        f.write(str(m) + '\n')
+                        f.close()
+                        break
 
-                except Exception as e:
-                    bot.logger.warning("Download Failed")
-                    print("Download Failed ", e)
-        bot.logout()
+                    except Exception as e:
+                        bot.logger.warning("Download Failed")
+                        print("Download Failed ", e)
+            bot.logout()
 
     def run(self):
         path = os.getcwd()
@@ -141,7 +143,7 @@ if __name__ == '__main__':
         schedule.every().day.at("16:00").do(bot.post_new_menu_items)
         schedule.every().day.at("16:00").do(bot.post_daily_deal)
         schedule.every(6).hours.do(bot.post_meme)
-        schedule.every().day.at("23:17").do(bot.post_meme)
+        schedule.every().day.at("23:28").do(bot.post_meme)
 
         while True:
             schedule.run_pending()

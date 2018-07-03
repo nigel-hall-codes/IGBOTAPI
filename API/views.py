@@ -22,6 +22,16 @@ import subprocess
 
 # Create your views here.
 
+def check_login(request):
+    username = request.data['username']
+    password = request.data['password']
+    user = authenticate(request, username=username, password=password)
+    if user is not None:
+        return True
+    else:
+        return False
+
+
 def home(request):
     return render(request, 'home.html')
 
@@ -84,7 +94,7 @@ class TestAPI(APIView):
     authentication_classes = [BasicAuthentication]
 
     def get(self, request):
-        if request.user.is_authenticated:
+        if check_login(request):
             print(request.user)
             data = {"message": "User authenticated"}
         else:
@@ -102,7 +112,8 @@ class Instagrams(APIView):
     authentication_classes = [BasicAuthentication]
 
     def post(self, request, id):
-        if request.user.is_authenticated:
+
+        if check_login(request):
             igusername = request.data['igusername']
             igpassword = request.data['igpassword']
             userSettings = UserSettings.objects.get(userID=id)
@@ -126,7 +137,7 @@ class WMs(APIView):
 
 
     def post(self, request, id):
-        if request.user.is_authenticated:
+        if check_login(request)
             url = request.data['url']
             dispensary = Dispensary.objects.get(url=url)
             settings = UserSettings.get(userID=id)
@@ -140,6 +151,7 @@ class WMs(APIView):
 
 
 class Settings(APIView):
+
     authentication_classes = [BasicAuthentication]
 
     def get(self, request, id):
@@ -153,7 +165,7 @@ class Settings(APIView):
         return Response(data)
 
     def post(self, request, id):
-        if request.user.is_authenticated:
+        if check_login(request):
             memeOn = request.data['memesOn']
             dailyDealsOn = request.data['dailyDealsOn']
             newItemsOn = request.data['newItemsOn']
@@ -172,7 +184,7 @@ class BotRun(APIView):
 
     def get(self, request, userID):
 
-        if request.user.is_authenticated:
+        if check_login(request)
             settings = UserSettings.objects.get(userID=request.user.id)
             if settings.botStatus == False:
                 bot = WMIGBot(userID)
@@ -188,7 +200,7 @@ class BotRun(APIView):
 class BotStop(APIView):
 
     def get(self, request, userID):
-        if request.user.is_authenticated:
+        if check_login(request)
             print(request.user.id)
             bot = WMIGBot(userID)
             bot.stop()
@@ -210,12 +222,12 @@ class BotTest(APIView):
     #     return Response(resp)
 
     def post(self, request, userID):
-        username = request.data['username']
-        password = request.data['password']
-        user = authenticate(request, username=username, password=password)
-        bot = WMIGBot(user.id)
-        bot.test()
-        resp = {"message", "It should have posted"}
+        if check_login(request):
+            bot = WMIGBot(userID)
+            bot.test()
+            resp = {"message", "It should have posted"}
+        else:
+            resp = {"message": "Not logged in"}
         return Response(resp)
 
 

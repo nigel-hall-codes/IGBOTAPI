@@ -121,9 +121,10 @@ class Instagrams(APIView):
             userSettings.igPassword = igpassword
             userSettings.save()
             msg = "Instagram credentials logged"
+
         else:
             msg = "You are not logged in."
-            resp = {"message": msg}
+        resp = {"message": msg}
         return Response(resp)
 
 
@@ -143,7 +144,7 @@ class WMs(APIView):
             settings = UserSettings.get(userID=id)
             settings.weedmapsSlug = dispensary.wmid
             settings.save()
-            msg =  "Assigned Weedmaps Menu"
+            msg = "Assigned Weedmaps Menu"
         else:
             msg = "Not logged in"
 

@@ -137,7 +137,7 @@ class WMs(APIView):
 
 
     def post(self, request, id):
-        if check_login(request)
+        if check_login(request):
             url = request.data['url']
             dispensary = Dispensary.objects.get(url=url)
             settings = UserSettings.get(userID=id)
@@ -184,7 +184,7 @@ class BotRun(APIView):
 
     def get(self, request, userID):
 
-        if check_login(request)
+        if check_login(request):
             settings = UserSettings.objects.get(userID=request.user.id)
             if settings.botStatus == False:
                 bot = WMIGBot(userID)
@@ -200,7 +200,7 @@ class BotRun(APIView):
 class BotStop(APIView):
 
     def get(self, request, userID):
-        if check_login(request)
+        if check_login(request):
             print(request.user.id)
             bot = WMIGBot(userID)
             bot.stop()

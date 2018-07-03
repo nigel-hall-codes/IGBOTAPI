@@ -75,7 +75,7 @@ class WMIGBot:
         bash = "nohup python3 {}/API/wmigbot.py {} {} > {}.out& ".format(path,
                                                                          str(self.userID),
                                                                          "False",
-                                                                         "alt"
+                                                                         self.accountDir + "/alt"
                                                                         )
 
 
@@ -143,8 +143,8 @@ if __name__ == '__main__':
 
     else:
 
-        schedule.every().day.at("23:58").do(bot.post_new_menu_items)
-        schedule.every().day.at("23:59").do(bot.post_daily_deal)
+        schedule.every().day.at("00:08").do(bot.post_new_menu_items)
+        schedule.every().day.at("00:08").do(bot.post_daily_deal)
         schedule.every(6).hours.do(bot.post_meme)
         # schedule.every().day.at("23:31").do(bot.post_meme)
 

@@ -141,7 +141,7 @@ class WMs(APIView):
         if check_login(request):
             url = request.data['url']
             dispensary = Dispensary.objects.get(url=url)
-            settings = UserSettings.get(userID=id)
+            settings = UserSettings.objects.get(userID=id)
             settings.weedmapsSlug = dispensary.wmid
             settings.save()
             msg = "Assigned Weedmaps Menu"
@@ -183,7 +183,7 @@ class Settings(APIView):
 
 class BotRun(APIView):
 
-    def get(self, request, userID):
+    def post(self, request, userID):
 
         if check_login(request):
             settings = UserSettings.objects.get(userID=request.user.id)
@@ -200,7 +200,7 @@ class BotRun(APIView):
 
 class BotStop(APIView):
 
-    def get(self, request, userID):
+    def post(self, request, userID):
         if check_login(request):
             print(request.user.id)
             bot = WMIGBot(userID)

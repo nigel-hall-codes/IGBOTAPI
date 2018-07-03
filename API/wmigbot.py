@@ -128,6 +128,7 @@ class WMIGBot:
         print("Bot Started")
 
 
+
 if __name__ == '__main__':
 
     bot = WMIGBot(sys.argv[1])

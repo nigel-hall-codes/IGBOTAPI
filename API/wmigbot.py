@@ -74,7 +74,7 @@ class WMIGBot:
         path = os.getcwd()
         bash = "nohup python3 {}/API/wmigbot.py {} {} > {}.out& ".format(path,
                                                                          str(self.userID),
-                                                                         "True",
+                                                                         "False",
                                                                          "alt"
                                                                         )
 

@@ -77,6 +77,7 @@ class WMIGBot:
                                                                          "False",
                                                                          self.accountDir + "/alt"
                                                                         )
+        print(bash)
 
 
         # p = subprocess.Popen(["python3", path+"/API/wmigbot.py", str(self.userID), "False"])
@@ -153,5 +154,4 @@ if __name__ == '__main__':
             print(bot.settings.botPID)
             time.sleep(60)
     # bot.post_meme()
-
 

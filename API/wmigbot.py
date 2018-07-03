@@ -143,8 +143,8 @@ if __name__ == '__main__':
 
     else:
 
-        schedule.every().day.at("16:00").do(bot.post_new_menu_items)
-        schedule.every().day.at("16:00").do(bot.post_daily_deal)
+        schedule.every().day.at("23:44").do(bot.post_new_menu_items)
+        schedule.every().day.at("23:45").do(bot.post_daily_deal)
         schedule.every(6).hours.do(bot.post_meme)
         # schedule.every().day.at("23:31").do(bot.post_meme)
 

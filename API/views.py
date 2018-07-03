@@ -160,14 +160,16 @@ class Settings(APIView):
 
         try:
             user_settings = UserSettings.objects.get(userID=id)
-            data = serializers.serialize("json", [user_settings])
-            print(data)
             msg = "Settings Found"
+            data = serializers.serialize("json", [user_settings, {'message': msg}])
+            print(data)
+
             data[0]['message'] = msg
+
 
         except Exception:
             msg = "Settings not found"
-            data[0]['message'] = msg
+            data = {"message": msg}
 
         return Response(data)
 

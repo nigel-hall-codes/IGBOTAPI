@@ -161,7 +161,8 @@ class Settings(APIView):
         try:
             user_settings = UserSettings.objects.get(userID=id)
             msg = "Settings Found"
-            data = serializers.serialize("json", [user_settings, {'message': msg}])
+            data = serializers.serialize("json", [user_settings])
+            resp = {'settings': data, "message": msg}
             print(data)
 
 
@@ -170,9 +171,9 @@ class Settings(APIView):
         except Exception as e:
             print(e)
             msg = "Settings not found"
-            data = {"message": msg}
+            resp = {"message": msg}
 
-        return Response(data)
+        return Response(resp)
 
     def post(self, request, id):
         if check_login(request):

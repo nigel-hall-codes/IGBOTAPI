@@ -215,6 +215,7 @@ class BotStop(APIView):
 
 class BotTest(APIView):
 
+    authentication_classes = [BasicAuthentication]
     # def get(self, request, userID):
     #     print(userID)
     #     bot = WMIGBot(userID)

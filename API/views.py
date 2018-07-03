@@ -167,7 +167,8 @@ class Settings(APIView):
 
 
 
-        except Exception:
+        except Exception as e:
+            print(e)
             msg = "Settings not found"
             data = {"message": msg}
 

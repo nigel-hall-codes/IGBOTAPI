@@ -142,7 +142,7 @@ class WMs(APIView):
             url = request.data['url']
             dispensary = Dispensary.objects.get(url=url)
             settings = UserSettings.objects.get(userID=id)
-            settings.weedmapsSlug = dispensary.wmid
+            settings.weedmapsSlug = dispensary.slug
             settings.save()
             msg = "Assigned Weedmaps Menu"
         else:

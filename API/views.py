@@ -164,7 +164,7 @@ class Settings(APIView):
             data = serializers.serialize("json", [user_settings, {'message': msg}])
             print(data)
 
-            data[0]['message'] = msg
+
 
 
         except Exception:

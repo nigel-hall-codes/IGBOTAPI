@@ -212,7 +212,7 @@ class BotStop(APIView):
             print(request.user.id)
             bot = WMIGBot(userID)
             bot.stop()
-            settings = UserSettings.objects.get(userID=request.user.id)
+            settings = UserSettings.objects.get(userID=userID)
             settings.botStatus = False
             settings.save()
             resp = {"message": "Bot has been stopped"}

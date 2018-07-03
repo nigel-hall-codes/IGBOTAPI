@@ -141,10 +141,13 @@ class WMs(APIView):
         if check_login(request):
             url = request.data['url']
             dispensary = Dispensary.objects.get(url=url)
-            settings = UserSettings.objects.get(userID=id)
-            settings.weedmapsSlug = dispensary.slug
-            settings.save()
-            msg = "Assigned Weedmaps Menu"
+            if dispensary is not None:
+                settings = UserSettings.objects.get(userID=id)
+                settings.weedmapsSlug = dispensary.slug
+                settings.save()
+                msg = "Assigned Weedmaps Menu"
+            else:
+                msg = "Not a valid URL"
         else:
             msg = "Not logged in"
 

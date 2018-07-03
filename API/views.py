@@ -193,7 +193,7 @@ class BotRun(APIView):
     def post(self, request, userID):
 
         if check_login(request):
-            settings = UserSettings.objects.get(userID=request.user.id)
+            settings = UserSettings.objects.get(userID=userID)
             if settings.botStatus == False:
                 bot = WMIGBot(userID)
                 bot.run()

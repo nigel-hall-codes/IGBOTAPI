@@ -16,8 +16,6 @@ from .wmigbot import WMIGBot
 from .models import Dispensary, UserSettings
 from django.contrib.auth.decorators import login_required
 
-import subprocess
-
 
 
 # Create your views here.
@@ -159,13 +157,18 @@ class Settings(APIView):
     authentication_classes = [BasicAuthentication]
 
     def get(self, request, id):
-        if request.user.is_authenticated:
-            print(request.user)
+
+        try:
             user_settings = UserSettings.objects.get(userID=id)
             data = serializers.serialize("json", [user_settings])
-        else:
-            data = {"message": "Not logged in"}
             print(request.user)
+            msg = "Settings Found"
+            data['message'] = msg
+
+        except Exception:
+            msg = "Settings not found"
+            data['message'] = msg
+
         return Response(data)
 
     def post(self, request, id):
@@ -219,12 +222,6 @@ class BotStop(APIView):
 class BotTest(APIView):
 
     authentication_classes = [BasicAuthentication]
-    # def get(self, request, userID):
-    #     print(userID)
-    #     bot = WMIGBot(userID)
-    #     bot.test()
-    #     resp = {"message", "It should have posted"}
-    #     return Response(resp)
 
     def post(self, request, userID):
         if check_login(request):

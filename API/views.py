@@ -163,11 +163,11 @@ class Settings(APIView):
             data = serializers.serialize("json", [user_settings])
             print(data)
             msg = "Settings Found"
-            data['message'] = msg
+            data[0]['message'] = msg
 
         except Exception:
             msg = "Settings not found"
-            data['message'] = msg
+            data[0]['message'] = msg
 
         return Response(data)
 

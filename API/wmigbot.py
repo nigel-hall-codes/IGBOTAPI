@@ -50,7 +50,7 @@ class WMIGBot:
         self.settings = UserSettings.objects.get(userID=self.userID)
         if self.settings.memeOn:
             bot = Bot()
-            bot.login(username=self.igusername, password=self.igpassword)
+            bot.login(username=self.igusername, password=self.igpassword, use_cookie=False)
             memes = bot.get_hashtag_medias("420")
             posted_memes = open("{}/postedMemes.txt".format(self.accountDir), "r").read().splitlines()
 
@@ -103,7 +103,7 @@ class WMIGBot:
             base_dir = self.accountDir + "/menuItemsToBeUploaded/"
             m.downloadNewMenuItemImages(base_dir)
             bot = Bot()
-            bot.login(username=self.igusername, password=self.igpassword)
+            bot.login(username=self.igusername, password=self.igpassword,use_cookie=False)
             for image in os.listdir(self.accountDir + '/menuItemsToBeUploaded'):
                 name = "".join(image.split('.')[:-1])
                 bot.upload_photo('{}{}'.format(base_dir, image),
@@ -118,7 +118,7 @@ class WMIGBot:
             time = datetime.datetime.now()
             base_dir = self.accountDir + "/dailyDealsToBeUploaded/"
             bot = Bot()
-            bot.login(username=self.igusername, password=self.igpassword)
+            bot.login(username=self.igusername, password=self.igpassword, use_cookie=False)
             m = Menu(self.dispensary.slug, self.dispensary.tipe)
             todays_deal = m.todays_deal()
             caption = "Check out today's deal: " + todays_deal['title']

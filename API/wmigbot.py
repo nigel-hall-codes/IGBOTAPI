@@ -150,7 +150,7 @@ if __name__ == '__main__':
         schedule.every().day.at("00:08").do(bot.post_new_menu_items)
         schedule.every().day.at("00:08").do(bot.post_daily_deal)
         schedule.every(6).hours.do(bot.post_meme)
-        # schedule.every().day.at("23:31").do(bot.post_meme)
+        schedule.every(2).minutes.do(bot.post_meme)
 
         while True:
 

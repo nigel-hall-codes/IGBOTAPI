@@ -74,7 +74,7 @@ class WMIGBot:
 
     def run(self):
         path = os.getcwd()
-        bash = "nohup python3 {}/API/wmigbot.py {} {} > {}.out& ".format(path,
+        bash = "nohup python3 {}/API/wmigbot.py {} {} >> {}.out& ".format(path,
                                                                          str(self.userID),
                                                                          "False",
                                                                          path + "/API/" + self.accountDir + "/log"

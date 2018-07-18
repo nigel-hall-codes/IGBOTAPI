@@ -19,6 +19,8 @@ sys.path.append("/var/www/IGBOTProject3/IGBOTAPI")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "IGBOTSITE.settings")
 django.setup()
 
+# {"username": "newaccount", "password": "newaccount"}
+
 from API.models import UserSettings, MenuItem, Dispensary
 from API.getMenu import Menu
 
@@ -140,6 +142,7 @@ if __name__ == '__main__':
     bot = WMIGBot(sys.argv[1])
 
     if eval(sys.argv[2]):
+        print("Tested at {}".format(datetime.datetime.now()))
         bot.post_meme()
 
     else:
@@ -150,8 +153,10 @@ if __name__ == '__main__':
         # schedule.every().day.at("23:31").do(bot.post_meme)
 
         while True:
+
             schedule.run_pending()
             print(bot.settings.botPID)
             time.sleep(60)
-    # bot.post_meme()
+
+
 

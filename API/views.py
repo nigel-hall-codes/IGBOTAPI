@@ -14,6 +14,7 @@ from django.middleware import csrf
 from rest_framework.authentication import BasicAuthentication
 from .wmigbot import WMIGBot
 from .models import Dispensary, UserSettings
+from instabot import Bot
 from django.contrib.auth.decorators import login_required
 
 
@@ -112,16 +113,22 @@ class Instagrams(APIView):
     def post(self, request, id):
 
         if check_login(request):
+
             igusername = request.data['igusername']
             igpassword = request.data['igpassword']
-            userSettings = UserSettings.objects.get(userID=id)
-            userSettings.igUsername = igusername
-            userSettings.igPassword = igpassword
-            userSettings.save()
+            b = Bot()
+            confirmed = b.login(username=igusername, password=igpassword)
+            if confirmed:
+                userSettings = UserSettings.objects.get(userID=id)
+                userSettings.igUsername = igusername
+                userSettings.igPassword = igpassword
+                userSettings.save()
+
+
             msg = "Instagram credentials logged"
 
         else:
-            msg = "You are not logged in."
+            msg = "User taken"
         resp = {"message": msg}
         return Response(resp)
 

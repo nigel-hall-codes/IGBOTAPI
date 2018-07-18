@@ -146,7 +146,7 @@ if __name__ == '__main__':
         bot.post_meme()
 
     else:
-
+        print("Bot started on {}".format(datetime.datetime.now()))
         schedule.every().day.at("00:08").do(bot.post_new_menu_items)
         schedule.every().day.at("00:08").do(bot.post_daily_deal)
         schedule.every(6).hours.do(bot.post_meme)

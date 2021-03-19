@@ -12,7 +12,7 @@ future==0.16.0
 huepy==0.9.8.1
 idna==2.0
 instabot==0.4.1
-Jinja2==2.8
+Jinja2==2.11.3
 jsonpatch==1.10
 jsonpointer==1.9
 

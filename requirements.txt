@@ -7,7 +7,7 @@ configobj==5.0.6
 crontab==0.22.1
 cryptography==1.2.3
 Django==2.0.6
-djangorestframework==3.8.2
+djangorestframework==3.11.2
 future==0.16.0
 huepy==0.9.8.1
 idna==2.0
